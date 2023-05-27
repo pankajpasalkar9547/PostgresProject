@@ -38,6 +38,7 @@ public class StudentController {
 	@PostMapping("/save")
 	private ResponseEntity<Object> saveStudent(@RequestBody StudentInfoDTO studentInfo)
 	{
+		System.out.println("Save method changes");
 		StudentInfo response = studentService.saveStudentInfo(studentInfo);
 		System.out.println(studentInfo);
 		ResponseEntity<Object> responseEntity = new ResponseEntity<>(response,HttpStatus.OK);
