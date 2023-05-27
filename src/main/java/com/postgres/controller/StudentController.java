@@ -29,6 +29,7 @@ public class StudentController {
 	@GetMapping("/all")
 	public ResponseEntity<Object> getAllStudent()
 	{
+		System.out.println("Initial change");
 		List<StudentInfoDTO> student = studentService.getStudents();
 		ResponseEntity<Object> responseEntity = new ResponseEntity<>(student,HttpStatus.OK);
 		return responseEntity;
