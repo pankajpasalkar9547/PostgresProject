@@ -48,6 +48,7 @@ public class StudentController {
 	@GetMapping("/getStudent/{studID}")
 	private ResponseEntity<Object> getStudent(@PathVariable("studID") int id)
 	{
+		System.out.println("Dev branch changes");
 		StudentInfo student = studentService.getStudentByID(id);
 		if(student.getName().isEmpty()||student.getName()=="")
 		{
